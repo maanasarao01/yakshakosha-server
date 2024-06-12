@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const path = require('path');
+const cors = require('cors');
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use(cors());
 
 const searchRoutes=require('./routes')
 app.use('/yakshagana/search',searchRoutes)
